@@ -15,7 +15,7 @@ class MainViewController: NSViewController {
     
     
     // Text fields....
-    @IBOutlet var ameTextField: NSTextField!
+    @IBOutlet var nameTextField: NSTextField!
     @IBOutlet var valueTextField: NSTextField!
     @IBOutlet var tagTextField: NSTextField!
     
@@ -34,29 +34,9 @@ class MainViewController: NSViewController {
     @IBAction func sendPressed(_ sender: Any) {
     
         
+        let receipt = getReceiptData()
+        app?.sendToServer( receiptInfo: receipt )
         
-            let str = "{ \"name\":\"John\", \"age\":31, \"city\":\"New York\" }"
-        
-            let url = NSURL(string: "http://0.0.0.0:4000/uploader")!
-            let request = NSMutableURLRequest(url: url as URL)
-            request.httpMethod = "POST"
-        
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpBody = str.data(using: .utf8)
-    
-            let task = URLSession.shared.dataTask(with: request as URLRequest){ data,response,error in
-                if error != nil{
-                    print(error!.localizedDescription)
-                    return
-                }
-                
-                let str = String.init(data: data!, encoding: .utf8)
-                print( str! )
-        
-            }
-            task.resume()
-        
-            app?.closePopover(sender: nil)
     }
     
     @IBAction func closePressed(_ sender: Any) {
@@ -68,6 +48,22 @@ class MainViewController: NSViewController {
     @IBAction func quitPressed(_ sender: Any) {
         NSApplication.shared().terminate(sender)
 
+    }
+    
+    func getReceiptData() -> ReceiptInfo{
+        
+        let info : ReceiptInfo! = ReceiptInfo()
+        info.name = nameTextField.stringValue
+        info.value = valueTextField.stringValue
+        info.date = datePicker.dateValue
+        info.uuid = UUID().uuidString
+        info.paid = true
+        let stringTags = tagTextField.stringValue
+        let tagArray = stringTags.components(separatedBy: ",")
+        
+        info.labels = tagArray
+        
+        return info
     }
 
 }

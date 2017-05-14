@@ -30,14 +30,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
-        let dragView = DragView(frame: NSRect(x: 0, y: 0, width: 24, height: 24))
-        dragView.app = self
+ 
+
         
+//        statusItem.title = "Receipts"
+        
+
+        statusItem.button?.image = NSImage(named: "icon")
+        statusItem.button?.image?.size = NSSize(width: 20, height: 20)
+        
+        let dragView = DragView(frame:(statusItem.button?.visibleRect)!)
+        dragView.app = self
         statusItem.button?.addSubview(dragView)
         statusItem.action = #selector(togglePopover( sender: ));
         
+        
+        
         popoverViewController = MainViewController(nibName: "MainViewController", bundle: nil)
+        popoverViewController?.app = self
         popover.contentViewController = popoverViewController
+        
         
     }
     
@@ -48,20 +60,69 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // -- Behaviour ----
     
-    func sendToServer(){
-        // TODO: make data class
+    func sendToServer(receiptInfo : ReceiptInfo) -> Bool{
+        
+        let str = "{ \"name\":\"John\", \"age\":31, \"city\":\"New York\" }"
+        
+        let url = NSURL(string: "http://0.0.0.0:4000/uploader")!
+        let request = NSMutableURLRequest(url: url as URL)
+        request.httpMethod = "POST"
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = receiptInfo.toJson()
+        
+        var sucess = true
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest){ data,response,error in
+            if error != nil{
+                print(error!.localizedDescription)
+                sucess = false
+                return
+            }
+            
+            let str = String.init(data: data!, encoding: .utf8)
+            print( str! )
+            
+        }
+        task.resume()
+    
+        
+        return sucess
     }
     
     
     // -- Popover ---
     
-    func showPopover(sender: AnyObject?, path : String?) {
+    func showPopover(sender: AnyObject?, path : NSURL?) {
         if let button = statusItem.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             
-        
-            let img  = NSImage(byReferencingFile: path!)
-            popoverViewController?.reciptImageView.image = img
+            if(path != nil){
+                
+//                NSLog((path?.baseURL?.absoluteString)!)
+//                let data = try ? Data(contentsOf: (path?.absoluteURL)! )
+//                
+//                let img  = NSImage(data: data?.base64EncodedData(options: NSData.Base64EncodingOptions.))
+//                //let img = NSImage(byReferencing: (path?.baseURL)!)
+////                let img  = NSImage(byReferencingFile: path!)
+                
+                if(path?.isFileURL == true){
+                    let img = NSImage(byReferencing: path!.filePathURL!)
+                    popoverViewController?.reciptImageView.image = img
+                }else{
+                    
+                    let url = path?.absoluteURL
+                    let data = try? Data(contentsOf: url!)
+                    
+                    let img = NSImage(data: data!)
+                    popoverViewController?.reciptImageView.image = img
+                    
+                }
+                
+
+                
+            }
+
         }
     }
     

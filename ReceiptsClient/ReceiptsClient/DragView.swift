@@ -63,15 +63,25 @@ class DragView: NSView {
     
     
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
-        guard let pasteboard = sender.draggingPasteboard().propertyList(forType: "NSFilenamesPboardType") as? NSArray,
-            let path = pasteboard[0] as? String
-            else { return false }
+//        guard let pasteboard = sender.draggingPasteboard().propertyList(forType: "NSFilenamesPboardType") as? NSArray,
+//            let path = pasteboard[0] as? String
+//            else { return false }
         
-        Swift.print("FilePath: \(path)")
-        app?.showPopover(sender: nil, path: path)
-        
-        
+//        
+//        let pasteboard = sender.draggingPasteboard().propertyList(forType: [NSFilenamesPboardType, NSURLPboardType])
+//        
+//        
+//        
+//        Swift.print("FilePath: \(path)")
+//        app?.showPopover(sender: nil, path: path)
+//        
+        let pboard = sender.draggingPasteboard()
+
+        let url = NSURL.init(from: pboard)
+    
+
         self.layer?.backgroundColor = nil
+        app?.showPopover(sender: nil, path: url)
         
         return true
     }

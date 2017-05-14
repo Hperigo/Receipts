@@ -13,6 +13,7 @@
 		BED45C8D1EC5F83B00E6ABE6 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED45C8C1EC5F83B00E6ABE6 /* MainViewController.xib */; };
 		BED45C8F1EC5F89100E6ABE6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED45C8E1EC5F89100E6ABE6 /* MainViewController.swift */; };
 		BED45C911EC5F8FE00E6ABE6 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED45C901EC5F8FE00E6ABE6 /* DragView.swift */; };
+		BED45C931EC636FF00E6ABE6 /* ReceiptInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED45C921EC636FF00E6ABE6 /* ReceiptInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BED45C8C1EC5F83B00E6ABE6 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		BED45C8E1EC5F89100E6ABE6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BED45C901EC5F8FE00E6ABE6 /* DragView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
+		BED45C921EC636FF00E6ABE6 /* ReceiptInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BED45C791EC5F7CF00E6ABE6 /* AppDelegate.swift */,
 				BED45C8E1EC5F89100E6ABE6 /* MainViewController.swift */,
 				BED45C901EC5F8FE00E6ABE6 /* DragView.swift */,
+				BED45C921EC636FF00E6ABE6 /* ReceiptInfo.swift */,
 				BED45C7D1EC5F7CF00E6ABE6 /* Assets.xcassets */,
 				BED45C881EC5F80D00E6ABE6 /* MainMenu.xib */,
 				BED45C8C1EC5F83B00E6ABE6 /* MainViewController.xib */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED45C931EC636FF00E6ABE6 /* ReceiptInfo.swift in Sources */,
 				BED45C8F1EC5F89100E6ABE6 /* MainViewController.swift in Sources */,
 				BED45C911EC5F8FE00E6ABE6 /* DragView.swift in Sources */,
 				BED45C7A1EC5F7CF00E6ABE6 /* AppDelegate.swift in Sources */,
@@ -285,6 +289,7 @@
 				BED45C871EC5F7CF00E6ABE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
