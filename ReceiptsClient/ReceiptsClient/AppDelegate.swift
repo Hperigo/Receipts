@@ -42,7 +42,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let dragView = DragView(frame:(statusItem.button?.visibleRect)!)
         dragView.app = self
         statusItem.button?.addSubview(dragView)
-        statusItem.action = #selector(togglePopover( sender: ));
+//        statusItem.action = #selector(togglePopover( sender: ));
+        statusItem.action = #selector(screenshot(sender: ))
         
         
         
@@ -58,13 +59,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     
-    // -- Behaviour ----
+    // -- HTTP Requests ----
     
-    func sendToServer(receiptInfo : ReceiptInfo) -> Bool{
+    func sendJsonToServer(receiptInfo : ReceiptInfo) -> Bool{
         
-        let str = "{ \"name\":\"John\", \"age\":31, \"city\":\"New York\" }"
-        
-        let url = NSURL(string: "http://0.0.0.0:4000/uploader")!
+        let url = NSURL(string: "http://0.0.0.0:4000/data")!
         let request = NSMutableURLRequest(url: url as URL)
         request.httpMethod = "POST"
         
@@ -91,6 +90,65 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     
+    func sendImageToServer( image : NSImage, filename : String ) -> Bool {
+        
+        var r  = URLRequest(url: URL(string: "http://0.0.0.0:4000/image")!)
+        r.httpMethod = "POST"
+        let boundary = "Boundary-\(UUID().uuidString)"
+        r.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+    
+        let bits = image.representations.first as? NSBitmapImageRep
+        let data = bits?.representation(using: .JPEG, properties: [:])
+        
+        
+        r.httpBody = createBody(boundary: boundary,
+                                data: data!,
+                                mimeType: "image/jpg",
+                                filename: filename)
+        
+        
+        let task = URLSession.shared.dataTask(with: r) { data, response, error in
+            guard let data = data, error == nil else {               // check for fundamental networking error
+                return
+            }
+            do {
+                let str = String.init(data: data, encoding: .utf8)
+                print( str! )
+//                return true
+            } catch let error as NSError {
+                print("error : \(error)")
+//                return false
+            }
+        }
+        task.resume()
+        return true
+    }
+    
+    
+    
+    func createBody(boundary: String,
+                    data: Data,
+                    mimeType: String,
+                    filename: String) -> Data {
+        
+        
+        let body = NSMutableData()
+        
+        let boundaryPrefix = "--\(boundary)\r\n"
+        
+        
+        body.appendString(boundaryPrefix)
+        body.appendString("Content-Disposition: form-data; name=\"file\"; filename=\"\(filename)\"\r\n")
+        body.appendString("Content-Type: \(mimeType)\r\n\r\n")
+        body.append(data)
+        body.appendString("\r\n")
+        body.appendString("--".appending(boundary.appending("--")))
+        
+        return body as Data
+    }
+    
+
+    
     // -- Popover ---
     
     func showPopover(sender: AnyObject?, path : NSURL?) {
@@ -98,13 +156,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             
             if(path != nil){
-                
-//                NSLog((path?.baseURL?.absoluteString)!)
-//                let data = try ? Data(contentsOf: (path?.absoluteURL)! )
-//                
-//                let img  = NSImage(data: data?.base64EncodedData(options: NSData.Base64EncodingOptions.))
-//                //let img = NSImage(byReferencing: (path?.baseURL)!)
-////                let img  = NSImage(byReferencingFile: path!)
                 
                 if(path?.isFileURL == true){
                     let img = NSImage(byReferencing: path!.filePathURL!)
@@ -128,6 +179,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func closePopover(sender: AnyObject?) {
         popover.performClose(sender)
+        cleanup()
     }
     
     func togglePopover(sender: AnyObject?) {
@@ -136,6 +188,48 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             showPopover(sender:nil, path: nil)
         }
+    }
+    
+    func screenshot(sender: AnyObject?) {
+        
+        let task:Process = Process()
+        task.launchPath = "/usr/sbin/screencapture"
+        
+        let temp_path = NSTemporaryDirectory() + "reciptsScreen.png"
+        NSLog(temp_path)
+        
+        task.arguments  = ["-i", temp_path]
+        
+        task.launch()
+    
+        task.waitUntilExit()
+//        togglePopover(sender: nil)
+        
+        showPopover(sender: nil, path: NSURL(fileURLWithPath: temp_path))
+    }
+    
+    func cleanup(){
+        
+        let fileManager = FileManager.default
+        
+        // Delete 'hello.swift' file
+        let temp_path = NSTemporaryDirectory() + "reciptsScreen.png"
+        
+        do {
+            try fileManager.removeItem(atPath: temp_path)
+        }
+        catch let error as NSError {
+            print("Ooops! Something went wrong: \(error)")
+        }
+        
+    }
+}
+
+// --
+extension NSMutableData {
+    func appendString(_ string: String) {
+        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        append(data!)
     }
 }
 

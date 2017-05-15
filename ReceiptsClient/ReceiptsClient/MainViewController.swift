@@ -35,7 +35,13 @@ class MainViewController: NSViewController {
     
         
         let receipt = getReceiptData()
-        app?.sendToServer( receiptInfo: receipt )
+        let sucess = app?.sendJsonToServer( receiptInfo: receipt )
+        
+        if(sucess == true ){
+            let name = receipt.name! + ".jpg"
+            app?.sendImageToServer(image: reciptImageView.image!, filename: name)
+            app?.closePopover(sender: nil)
+        }
         
     }
     
@@ -46,6 +52,7 @@ class MainViewController: NSViewController {
     }
     
     @IBAction func quitPressed(_ sender: Any) {
+        app?.cleanup()
         NSApplication.shared().terminate(sender)
 
     }
