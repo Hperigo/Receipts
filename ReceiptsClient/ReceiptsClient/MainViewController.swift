@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Money
 
 class MainViewController: NSViewController {
 
@@ -28,33 +29,44 @@ class MainViewController: NSViewController {
         // Do view setup here.
         
         datePicker.dateValue = Date()
-
+        let money : BRL = 120.30
+        
+        valueTextField.stringValue = money.formatted(withStyle: .currency)
     }
     
     @IBAction func sendPressed(_ sender: Any) {
     
         
         let receipt = getReceiptData()
-        let sucess = app?.sendJsonToServer( receiptInfo: receipt )
+        receipt.image = reciptImageView.image
         
-        if(sucess == true ){
-            let name = receipt.name! + ".jpg"
-            app?.sendImageToServer(image: reciptImageView.image!, filename: name)
-            app?.closePopover(sender: nil)
-        }
+        let name = receipt.name! + ".jpg"
+        app?.sendImageToServer(  receipt: receipt , filename: name)
+        app?.closePopover(sender: nil)
         
     }
     
     @IBAction func closePressed(_ sender: Any) {
-        
-            app?.closePopover(sender: nil)
-        
+        app?.closePopover(sender: nil)
     }
     
     @IBAction func quitPressed(_ sender: Any) {
         app?.cleanup()
         NSApplication.shared().terminate(sender)
 
+    }
+    @IBAction func valueTextDidChange(_ sender: NSTextField) {
+        
+        let value = Double(sender.stringValue)
+        
+        if(value != nil){
+            let money = BRL(value!)
+            sender.stringValue = money.formatted(withStyle: .currency)
+        }else{
+            sender.stringValue = ""
+        }
+
+        
     }
     
     func getReceiptData() -> ReceiptInfo{

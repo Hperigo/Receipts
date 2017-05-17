@@ -61,50 +61,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // -- HTTP Requests ----
     
-    func sendJsonToServer(receiptInfo : ReceiptInfo) -> Bool{
-        
-        let url = NSURL(string: "http://0.0.0.0:4000/data")!
-        let request = NSMutableURLRequest(url: url as URL)
-        request.httpMethod = "POST"
-        
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = receiptInfo.toJson()
-        
-        var sucess = true
-        
-        let task = URLSession.shared.dataTask(with: request as URLRequest){ data,response,error in
-            if error != nil{
-                print(error!.localizedDescription)
-                sucess = false
-                return
-            }
-            
-            let str = String.init(data: data!, encoding: .utf8)
-            print( str! )
-            
-        }
-        task.resume()
-    
-        
-        return sucess
-    }
-    
-    
-    func sendImageToServer( image : NSImage, filename : String ) -> Bool {
+    func sendImageToServer( receipt: ReceiptInfo, filename : String )  {
         
         var r  = URLRequest(url: URL(string: "http://0.0.0.0:4000/image")!)
         r.httpMethod = "POST"
         let boundary = "Boundary-\(UUID().uuidString)"
         r.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
     
-        let bits = image.representations.first as? NSBitmapImageRep
+        let image = receipt.image
+        let bits = image?.representations.first as? NSBitmapImageRep
         let data = bits?.representation(using: .JPEG, properties: [:])
+
         
+        let str = String(data: receipt.toJson(), encoding: .utf8)
         
         r.httpBody = createBody(boundary: boundary,
                                 data: data!,
                                 mimeType: "image/jpg",
-                                filename: filename)
+                                filename: filename, parameters: ["waka" : str!])
         
         
         let task = URLSession.shared.dataTask(with: r) { data, response, error in
@@ -117,11 +91,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //                return true
             } catch let error as NSError {
                 print("error : \(error)")
-//                return false
             }
         }
         task.resume()
-        return true
     }
     
     
@@ -129,13 +101,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func createBody(boundary: String,
                     data: Data,
                     mimeType: String,
-                    filename: String) -> Data {
+                    filename: String,
+                    parameters:[String:String] ) -> Data {
         
         
         let body = NSMutableData()
         
         let boundaryPrefix = "--\(boundary)\r\n"
         
+        for (key, value) in parameters {
+            body.appendString("--\(boundary)\r\n")
+            body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+            body.appendString("\(value)\r\n")
+        }
         
         body.appendString(boundaryPrefix)
         body.appendString("Content-Disposition: form-data; name=\"file\"; filename=\"\(filename)\"\r\n")

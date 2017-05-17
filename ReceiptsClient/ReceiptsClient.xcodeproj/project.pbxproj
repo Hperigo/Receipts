@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B332FB761175A5C74959D07C /* Pods_ReceiptsClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EF36BD17D6C09F75A50064 /* Pods_ReceiptsClient.framework */; };
 		BED45C7A1EC5F7CF00E6ABE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED45C791EC5F7CF00E6ABE6 /* AppDelegate.swift */; };
 		BED45C7E1EC5F7CF00E6ABE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED45C7D1EC5F7CF00E6ABE6 /* Assets.xcassets */; };
 		BED45C891EC5F80D00E6ABE6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED45C881EC5F80D00E6ABE6 /* MainMenu.xib */; };
@@ -16,7 +17,34 @@
 		BED45C931EC636FF00E6ABE6 /* ReceiptInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED45C921EC636FF00E6ABE6 /* ReceiptInfo.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BE4DF3DC1ECBD80500B86D98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4DF3D61ECBD80500B86D98 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34FB0F06E21822FFA01E68FE762B3A58;
+			remoteInfo = Money;
+		};
+		BE4DF3DE1ECBD80500B86D98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4DF3D61ECBD80500B86D98 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 31862517A97A55EAD85F942D336730B2;
+			remoteInfo = "Pods-ReceiptsClient";
+		};
+		BE4DF3E01ECBD80500B86D98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE4DF3D61ECBD80500B86D98 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83D23098754A79F94B6621707B42F19A;
+			remoteInfo = ValueCoding;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		5DF25B5B0C1313F9F7349EBF /* Pods-ReceiptsClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptsClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptsClient/Pods-ReceiptsClient.release.xcconfig"; sourceTree = "<group>"; };
+		71EF36BD17D6C09F75A50064 /* Pods_ReceiptsClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReceiptsClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4DF3D61ECBD80500B86D98 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		BED45C761EC5F7CF00E6ABE6 /* ReceiptsClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptsClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED45C791EC5F7CF00E6ABE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED45C7D1EC5F7CF00E6ABE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +54,7 @@
 		BED45C8E1EC5F89100E6ABE6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BED45C901EC5F8FE00E6ABE6 /* DragView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
 		BED45C921EC636FF00E6ABE6 /* ReceiptInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptInfo.swift; sourceTree = "<group>"; };
+		DA629F6E412A15B6FBBAAE0F /* Pods-ReceiptsClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptsClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptsClient/Pods-ReceiptsClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +62,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B332FB761175A5C74959D07C /* Pods_ReceiptsClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D72409ABAB081C58F6B7825 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71EF36BD17D6C09F75A50064 /* Pods_ReceiptsClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE4DF3D71ECBD80500B86D98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE4DF3DD1ECBD80500B86D98 /* Money.framework */,
+				BE4DF3DF1ECBD80500B86D98 /* Pods_ReceiptsClient.framework */,
+				BE4DF3E11ECBD80500B86D98 /* ValueCoding.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BED45C6D1EC5F7CF00E6ABE6 = {
 			isa = PBXGroup;
 			children = (
+				BE4DF3D61ECBD80500B86D98 /* Pods.xcodeproj */,
 				BED45C781EC5F7CF00E6ABE6 /* ReceiptsClient */,
 				BED45C771EC5F7CF00E6ABE6 /* Products */,
+				F7990ADC44BE8E3E2EF9124F /* Pods */,
+				5D72409ABAB081C58F6B7825 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +121,15 @@
 			path = ReceiptsClient;
 			sourceTree = "<group>";
 		};
+		F7990ADC44BE8E3E2EF9124F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA629F6E412A15B6FBBAAE0F /* Pods-ReceiptsClient.debug.xcconfig */,
+				5DF25B5B0C1313F9F7349EBF /* Pods-ReceiptsClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BED45C851EC5F7CF00E6ABE6 /* Build configuration list for PBXNativeTarget "ReceiptsClient" */;
 			buildPhases = (
+				634349657897EDBC9A31CDEF /* [CP] Check Pods Manifest.lock */,
 				BED45C721EC5F7CF00E6ABE6 /* Sources */,
 				BED45C731EC5F7CF00E6ABE6 /* Frameworks */,
 				BED45C741EC5F7CF00E6ABE6 /* Resources */,
+				6D52EB93EA0F5BFC170AE5F8 /* [CP] Embed Pods Frameworks */,
+				0B6604859C88947E88EC0D97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -117,12 +180,42 @@
 			mainGroup = BED45C6D1EC5F7CF00E6ABE6;
 			productRefGroup = BED45C771EC5F7CF00E6ABE6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BE4DF3D71ECBD80500B86D98 /* Products */;
+					ProjectRef = BE4DF3D61ECBD80500B86D98 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BED45C751EC5F7CF00E6ABE6 /* ReceiptsClient */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BE4DF3DD1ECBD80500B86D98 /* Money.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Money.framework;
+			remoteRef = BE4DF3DC1ECBD80500B86D98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE4DF3DF1ECBD80500B86D98 /* Pods_ReceiptsClient.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_ReceiptsClient.framework;
+			remoteRef = BE4DF3DE1ECBD80500B86D98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE4DF3E11ECBD80500B86D98 /* ValueCoding.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ValueCoding.framework;
+			remoteRef = BE4DF3E01ECBD80500B86D98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BED45C741EC5F7CF00E6ABE6 /* Resources */ = {
@@ -136,6 +229,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B6604859C88947E88EC0D97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReceiptsClient/Pods-ReceiptsClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		634349657897EDBC9A31CDEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D52EB93EA0F5BFC170AE5F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReceiptsClient/Pods-ReceiptsClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BED45C721EC5F7CF00E6ABE6 /* Sources */ = {
@@ -246,6 +387,7 @@
 		};
 		BED45C861EC5F7CF00E6ABE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA629F6E412A15B6FBBAAE0F /* Pods-ReceiptsClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -259,6 +401,7 @@
 		};
 		BED45C871EC5F7CF00E6ABE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DF25B5B0C1313F9F7349EBF /* Pods-ReceiptsClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;

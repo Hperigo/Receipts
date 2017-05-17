@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cocoa
 
 class ReceiptInfo{
     
@@ -18,6 +19,8 @@ class ReceiptInfo{
     
     var date : Date?
     var paid : Bool?
+    
+    var image : NSImage?
     
     func toJson() -> Data{
         

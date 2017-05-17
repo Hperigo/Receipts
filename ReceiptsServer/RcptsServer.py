@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, json
 from werkzeug import secure_filename
 
 from pymongo import MongoClient
@@ -8,7 +8,7 @@ mongo_client = MongoClient()
 mongo_db = mongo_client["receipts"]
 
 UPLOAD_FOLDER = './uploads'
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+ALLOWED_EXTENSIONS = set(['pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -41,8 +41,12 @@ def upload_image():
             print("no file name")
             flash('No selected file')
             return "ERROR: NO FILE NAME"
+
         if file and allowed_file(file.filename):
             print("file OK")
+
+            json_data  = json.loads(request.form["waka"])
+            print(json_data["uuid"])
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return "OK"
