@@ -61,7 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // -- HTTP Requests ----
     
-    func sendImageToServer( receipt: ReceiptInfo, filename : String )  {
+    func sendImageToServer( receipt: ReceiptInfo)  {
         
         var r  = URLRequest(url: URL(string: "http://0.0.0.0:4000/image")!)
         r.httpMethod = "POST"
@@ -78,7 +78,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         r.httpBody = createBody(boundary: boundary,
                                 data: data!,
                                 mimeType: "image/jpg",
-                                filename: filename, parameters: ["waka" : str!])
+                                filename: receipt.fileName!, parameters: ["data" : str!])
         
         
         let task = URLSession.shared.dataTask(with: r) { data, response, error in

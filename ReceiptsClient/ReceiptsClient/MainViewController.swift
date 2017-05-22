@@ -29,9 +29,7 @@ class MainViewController: NSViewController {
         // Do view setup here.
         
         datePicker.dateValue = Date()
-        let money : BRL = 120.30
-        
-        valueTextField.stringValue = money.formatted(withStyle: .currency)
+
     }
     
     @IBAction func sendPressed(_ sender: Any) {
@@ -40,8 +38,8 @@ class MainViewController: NSViewController {
         let receipt = getReceiptData()
         receipt.image = reciptImageView.image
         
-        let name = receipt.name! + ".jpg"
-        app?.sendImageToServer(  receipt: receipt , filename: name)
+        receipt.fileName =  receipt.uuid! + ".jpg"
+        app?.sendImageToServer(  receipt: receipt )
         app?.closePopover(sender: nil)
         
     }
@@ -62,8 +60,11 @@ class MainViewController: NSViewController {
         if(value != nil){
             let money = BRL(value!)
             sender.stringValue = money.formatted(withStyle: .currency)
+            sender.backgroundColor = NSColor.white
+
         }else{
-            sender.stringValue = ""
+//            sender.stringValue = ""
+            sender.backgroundColor = NSColor(red: 0.9, green: 0.2, blue: 0.2, alpha: 0.2)
         }
 
         
@@ -72,7 +73,6 @@ class MainViewController: NSViewController {
     func getReceiptData() -> ReceiptInfo{
         
         let info : ReceiptInfo! = ReceiptInfo()
-        info.name = nameTextField.stringValue
         info.value = valueTextField.stringValue
         info.date = datePicker.dateValue
         info.uuid = UUID().uuidString
@@ -80,7 +80,7 @@ class MainViewController: NSViewController {
         let stringTags = tagTextField.stringValue
         let tagArray = stringTags.components(separatedBy: ",")
         
-        info.labels = tagArray
+        info.tags = tagArray
         
         return info
     }

@@ -8,14 +8,15 @@
 
 import Foundation
 import Cocoa
+import SwiftyJSON
 
 class ReceiptInfo{
     
     var uuid : String?
-    var name : String?
+    var fileName : String?
     var value : String?
     
-    var labels : [String] = []
+    var tags : [String] = []
     
     var date : Date?
     var paid : Bool?
@@ -23,26 +24,19 @@ class ReceiptInfo{
     var image : NSImage?
     
     func toJson() -> Data{
-        
-        let jsonObject: [String: String]  =
-            [
+
+        let json : JSON = [
                 "uuid": uuid!,
-                "name": name!,
+                "file_name": fileName!,
                 "value": value!,
                 "date": (date?.description)!,
                 "paid": (paid?.description)!,
-                "labels": labels.description
-            ]
+                "labels": tags
+        ]
         
-        let valid = JSONSerialization.isValidJSONObject(jsonObject) // true
-
-        if(valid == false){
-            NSLog("NOT valid JSON")
-        }
+        let data = try? json.rawData()
         
-        let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
-        
-        return jsonData!
+        return data!
     }
     
 }

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+   <body>
+
+     <script>
+      function search() {
+        console.log("...");
+      }
+
+      function buidList() {
+          $.getJSON( "/json", function( data ) {
+            console.log(data);
+            var items = [];
+            $.each( data, function( key, val ) {
+
+              items.push("<table class='table table-hover'>");
+              items.push("<p> ---- </p>")
+              items.push("<tr>");
+              items.push( "<th> uuid </th>" );
+              items.push( "<td>" + val.uuid + "</td>" );
+              items.push("</tr>");
+
+              items.push("<tr>");
+              items.push( "<th> name </th>" );
+              items.push( "<td>" + val.file_name + "</td>" );
+              items.push("</tr>");
+
+              items.push("<tr>");
+              items.push( "<th> value </th>" );
+              items.push( "<td>" + val.value + "</td>" );
+              items.push("</tr>");
+
+              items.push("<tr>");
+              items.push( "<th> tags </th>" );
+              items.push( "<td>" + val.labels + "</td>" );
+              items.push("</tr>");
+
+              items.push("</table>");
+
+            });
+
+            $( "<div/>", {
+            html: items.join( "" )
+            }).appendTo( "body" );
+
+
+          });// end of get json
+      }
+
+      $(function() {
+          buidList()
+      });
+
+     </script>
+
+     <input type="text" id="myInput" onkeyup="search()" placeholder="Search for names..">
+
+
+     <!-- <br>
+     {% for data in  result %}
+     <i> -------- </i>
+      <table class="table table-hover" style="width: 800px;">
+        {% for key, value in data.items()  %}
+
+           <tr>
+              <th> {{ key }} </th>
+              <td> {{value }} </td>
+           </tr>
+
+        {% endfor %}
+      </table>
+      {% endfor %} -->
+
+
+   </body>
+</html>

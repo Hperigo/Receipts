@@ -7,29 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		152CCB99C9CEA26271664985EB03EB4B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A313356B93812C2C0809F9B909B8E /* Currency.swift */; };
-		17A6AFE8F8280BFE1154D27549C003E1 /* ValueCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0AE4DEE83BE88B10EF748518211384 /* ValueCoding.swift */; };
-		2A374B8AB92C487B55FFCC98851356F6 /* Money-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C74EDBA3FB6511D7036F1CF9FF0FCCF /* Money-dummy.m */; };
-		4CD169FA18928FC560D1ADB1AC0BA73E /* DecimalNumberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643EF288166E777EA074568A23E66011 /* DecimalNumberType.swift */; };
-		512C4BACD43B77EFE7565A02DBB20B92 /* NSDecimalNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988F75630709EB01994F640707429C19 /* NSDecimalNumberExtensions.swift */; };
+		152CCB99C9CEA26271664985EB03EB4B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A94F593AF6B38166F1CF9E1336663CF /* Currency.swift */; };
+		17A6AFE8F8280BFE1154D27549C003E1 /* ValueCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062D64C948D8122D950B85AFE3AE7F4C /* ValueCoding.swift */; };
+		21AD90E3711DC01BC400EFB9EBA18849 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FBF1778B34B24CDFEC43247FC1D7A /* SwiftyJSON.swift */; };
+		2A374B8AB92C487B55FFCC98851356F6 /* Money-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A04AF7CB243F5B5EB0A8A0A6F42FF15 /* Money-dummy.m */; };
+		2DC4083EE09139AF9C1FF579243BC4E2 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 93732F877143573598DE261E855CAF2F /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CD169FA18928FC560D1ADB1AC0BA73E /* DecimalNumberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766DE1D210F724DEBEBD75BBC844B3AE /* DecimalNumberType.swift */; };
+		512C4BACD43B77EFE7565A02DBB20B92 /* NSDecimalNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE650B7446471867E402991A7E12F95 /* NSDecimalNumberExtensions.swift */; };
 		5D54DAC043EAD809304DCEB2C322D346 /* ValueCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8978B600286B787D5912887253DC2D /* ValueCoding.framework */; };
-		5D9F6E7576C49C0F43D1C6C01C37E390 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C97F0A765A972F11E2DE99955CE9B4 /* Decimal.swift */; };
-		5E33D3542E94BA529E9A2913C20E1D28 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CB22174930693CE8DB1C55816DDA63 /* Cocoa.framework */; };
-		7E277B7D9835008315C2ACEB101C1B4B /* Pods-ReceiptsClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 379093DB4D515519ADF7E98A63F7034C /* Pods-ReceiptsClient-dummy.m */; };
-		7EAE4C1A07AAF62EEF778CDBC431133F /* NSDecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C88A428616C7F3A6BCF07CFC65884 /* NSDecimalExtensions.swift */; };
-		8151D5FB79F63C6D41FEE7FFA67F3CAB /* Pods-ReceiptsClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E551C77FFC5500179BC5B015FD07E6 /* Pods-ReceiptsClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99E182168E94CAC1396797C0156B752A /* ValueCoding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9DEBCEA9DAC81BDD381B6BFFC71CC86 /* ValueCoding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB17DF0E01F53BC8B92D01DC0AC2C587 /* Money-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F98661BF2067F485630E5F71E1D33EFC /* Money-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF0AAA37737FA71C80C53BC8BECFFB00 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5141A19BB07D7FA06F1BBBBE31F6C039 /* Locale.swift */; };
+		5D9F6E7576C49C0F43D1C6C01C37E390 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC74138FB0CF8966F54DBA33A4A2074 /* Decimal.swift */; };
+		7CDD9D0B29492DCAB364D1A403044A33 /* Pods-ReceiptsClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E551C77FFC5500179BC5B015FD07E6 /* Pods-ReceiptsClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EAE4C1A07AAF62EEF778CDBC431133F /* NSDecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37144DC6D623A4C790C68287017464D9 /* NSDecimalExtensions.swift */; };
+		89C1C55A41A10CDB7EE7360962C4F3C6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CB22174930693CE8DB1C55816DDA63 /* Cocoa.framework */; };
+		99E182168E94CAC1396797C0156B752A /* ValueCoding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E6935B95858C0E32FB474039677DD9 /* ValueCoding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B09AAECC3DE30FA83746107BDE5591E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CB22174930693CE8DB1C55816DDA63 /* Cocoa.framework */; };
+		AB17DF0E01F53BC8B92D01DC0AC2C587 /* Money-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC573CF7AD86A8D8E4048D81140F8EBE /* Money-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF0AAA37737FA71C80C53BC8BECFFB00 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AFE3E043F8A42C4EFF7B291F2DE383 /* Locale.swift */; };
+		B73DD004C2700A5279DAAB8389FFBEE1 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDECEB7EACECE5BE7922EC777D37E56 /* SwiftyJSON-dummy.m */; };
 		BB6B6F1191BC3D9E8C13141D8E849250 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CB22174930693CE8DB1C55816DDA63 /* Cocoa.framework */; };
-		BC150CAA274CC53848503EBEFB2B539A /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F81B0D55CBA4FC2EBEA9CC3CB7BB0 /* Money.swift */; };
-		BD2566709BE60F73F3C5C848DF141037 /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5EFD1CF299B2F64A4D110F2702F12F /* Bitcoin.swift */; };
-		C5905F0FF9FB9B46BB192F27436DE452 /* Autogenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311C379B60EBDE1DFA0C80824BC01D1C /* Autogenerated.swift */; };
+		BC150CAA274CC53848503EBEFB2B539A /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EB902342EBD11E3DC4A32DE242778 /* Money.swift */; };
+		BD2566709BE60F73F3C5C848DF141037 /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DC4DED327122845F9EDA7385541F1 /* Bitcoin.swift */; };
+		C5905F0FF9FB9B46BB192F27436DE452 /* Autogenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C88D48DA704434398AC216F02811D27 /* Autogenerated.swift */; };
 		CAF85F1D435BA936A30492B882B7298F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CB22174930693CE8DB1C55816DDA63 /* Cocoa.framework */; };
-		E4B2E5B6737C664EDBFB6356B18FDF52 /* ValueCoding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C84BFF5EB5661FCEC9C8F0FBF1BEE65 /* ValueCoding-dummy.m */; };
+		D3D5CD624EF9284E34601ED689EDFB96 /* Pods-ReceiptsClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 379093DB4D515519ADF7E98A63F7034C /* Pods-ReceiptsClient-dummy.m */; };
+		E4B2E5B6737C664EDBFB6356B18FDF52 /* ValueCoding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C2504AC786FCF6FE575FF553C030F /* ValueCoding-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		18BD5D26DBAB130AEE60A2892E4A1CDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5860D517378348364EBC19D69199FE7;
+			remoteInfo = ValueCoding;
+		};
+		1CF41E04D52B63584258932E5586C101 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3229FCC6828F4221C6E350525E98103;
+			remoteInfo = Money;
+		};
 		6C193786D9641A2362536F822BCD3838 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -37,64 +55,73 @@
 			remoteGlobalIDString = E5860D517378348364EBC19D69199FE7;
 			remoteInfo = ValueCoding;
 		};
-		7BD6FB6A0317A736ADE2D0BBD7A5FCD3 /* PBXContainerItemProxy */ = {
+		B8E6908368B4FCD0468D4CC3B92D61F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C3229FCC6828F4221C6E350525E98103;
-			remoteInfo = Money;
-		};
-		BF2F9DAEF52B62C4542305DB72DF5E52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E5860D517378348364EBC19D69199FE7;
-			remoteInfo = ValueCoding;
+			remoteGlobalIDString = D87E512FC0ABA3FF378D38140548F23B;
+			remoteInfo = SwiftyJSON;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		017822E6B6E9073D6BAA99CA14A67626 /* Pods-ReceiptsClient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReceiptsClient-acknowledgements.plist"; sourceTree = "<group>"; };
+		05AFE3E043F8A42C4EFF7B291F2DE383 /* Locale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locale.swift; path = Sources/Locale.swift; sourceTree = "<group>"; };
+		062D64C948D8122D950B85AFE3AE7F4C /* ValueCoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueCoding.swift; path = Sources/ValueCoding.swift; sourceTree = "<group>"; };
 		0ED6A4902BEFCB3453358E36296A49A2 /* Pods-ReceiptsClient-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReceiptsClient-frameworks.sh"; sourceTree = "<group>"; };
-		1F5716BFFBF575BD02E590E8B8C29854 /* Money.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Money.xcconfig; sourceTree = "<group>"; };
-		311C379B60EBDE1DFA0C80824BC01D1C /* Autogenerated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Autogenerated.swift; path = Sources/Autogenerated.swift; sourceTree = "<group>"; };
-		31862517A97A55EAD85F942D336730B2 /* Pods_ReceiptsClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ReceiptsClient.framework; path = "Pods-ReceiptsClient.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34FB0F06E21822FFA01E68FE762B3A58 /* Money.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Money.framework; path = Money.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C5294AFD4DEDF84492773C58F88481 /* ValueCoding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ValueCoding.modulemap; sourceTree = "<group>"; };
+		191FBF1778B34B24CDFEC43247FC1D7A /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		1F9544AC103FD3D65D633191F4C69787 /* ValueCoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ValueCoding.framework; path = ValueCoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D42DD45B7764B87351BF18F4F2161E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A94F593AF6B38166F1CF9E1336663CF /* Currency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = Sources/Currency.swift; sourceTree = "<group>"; };
+		37144DC6D623A4C790C68287017464D9 /* NSDecimalExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalExtensions.swift; path = Sources/NSDecimalExtensions.swift; sourceTree = "<group>"; };
 		379093DB4D515519ADF7E98A63F7034C /* Pods-ReceiptsClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReceiptsClient-dummy.m"; sourceTree = "<group>"; };
-		3C0477B6AAFC1D8FE05F019ECC789F57 /* Money-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Money-prefix.pch"; sourceTree = "<group>"; };
+		3EC74138FB0CF8966F54DBA33A4A2074 /* Decimal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decimal.swift; path = Sources/Decimal.swift; sourceTree = "<group>"; };
 		3F8978B600286B787D5912887253DC2D /* ValueCoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ValueCoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		412F6314B7D21C14D492F1D2B4CDA021 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		43CB22174930693CE8DB1C55816DDA63 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		5141A19BB07D7FA06F1BBBBE31F6C039 /* Locale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locale.swift; path = Sources/Locale.swift; sourceTree = "<group>"; };
-		598C88A428616C7F3A6BCF07CFC65884 /* NSDecimalExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalExtensions.swift; path = Sources/NSDecimalExtensions.swift; sourceTree = "<group>"; };
+		53BF9F310A4EEFDA329E26585DD416F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A04AF7CB243F5B5EB0A8A0A6F42FF15 /* Money-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Money-dummy.m"; sourceTree = "<group>"; };
 		5E215F8C7FCA1215BD78D50E4E67663F /* Pods-ReceiptsClient-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReceiptsClient-acknowledgements.markdown"; sourceTree = "<group>"; };
-		627F6847176AD7A626143A1E7174C481 /* ValueCoding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ValueCoding.modulemap; sourceTree = "<group>"; };
-		643EF288166E777EA074568A23E66011 /* DecimalNumberType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalNumberType.swift; path = Sources/DecimalNumberType.swift; sourceTree = "<group>"; };
 		64E551C77FFC5500179BC5B015FD07E6 /* Pods-ReceiptsClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ReceiptsClient-umbrella.h"; sourceTree = "<group>"; };
-		6C74EDBA3FB6511D7036F1CF9FF0FCCF /* Money-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Money-dummy.m"; sourceTree = "<group>"; };
-		83D23098754A79F94B6621707B42F19A /* ValueCoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ValueCoding.framework; path = ValueCoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		885D7CF530792A83F7E625ACC8929C27 /* Money.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Money.modulemap; sourceTree = "<group>"; };
+		653EB902342EBD11E3DC4A32DE242778 /* Money.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Money.swift; path = Sources/Money.swift; sourceTree = "<group>"; };
+		65E6935B95858C0E32FB474039677DD9 /* ValueCoding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueCoding-umbrella.h"; sourceTree = "<group>"; };
+		66950280F441D6FCEFDF7CC609C9F241 /* Money-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Money-prefix.pch"; sourceTree = "<group>"; };
+		766DE1D210F724DEBEBD75BBC844B3AE /* DecimalNumberType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalNumberType.swift; path = Sources/DecimalNumberType.swift; sourceTree = "<group>"; };
+		8084DA19EFD69748144E02FB2419FF29 /* Money.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Money.modulemap; sourceTree = "<group>"; };
+		8C88D48DA704434398AC216F02811D27 /* Autogenerated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Autogenerated.swift; path = Sources/Autogenerated.swift; sourceTree = "<group>"; };
+		8CDECEB7EACECE5BE7922EC777D37E56 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		93732F877143573598DE261E855CAF2F /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95203CEA7EDC7B3C248444E970B8F042 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95150FAF4471E73A8D19D777F345F4A8 /* Money.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Money.framework; path = Money.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		956F46B5553FFC66E13F5B175A7AD89B /* Pods-ReceiptsClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReceiptsClient.debug.xcconfig"; sourceTree = "<group>"; };
-		958F81B0D55CBA4FC2EBEA9CC3CB7BB0 /* Money.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Money.swift; path = Sources/Money.swift; sourceTree = "<group>"; };
-		988F75630709EB01994F640707429C19 /* NSDecimalNumberExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberExtensions.swift; path = Sources/NSDecimalNumberExtensions.swift; sourceTree = "<group>"; };
-		9C84BFF5EB5661FCEC9C8F0FBF1BEE65 /* ValueCoding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ValueCoding-dummy.m"; sourceTree = "<group>"; };
-		A8675CC670D84E8EE98177B7F8B3CA45 /* ValueCoding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueCoding-prefix.pch"; sourceTree = "<group>"; };
-		C26D17B2D498D4528C465FCF9CEB34C7 /* ValueCoding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ValueCoding.xcconfig; sourceTree = "<group>"; };
-		C4C97F0A765A972F11E2DE99955CE9B4 /* Decimal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decimal.swift; path = Sources/Decimal.swift; sourceTree = "<group>"; };
+		A003439D0285AF063A8122D773AB661C /* ValueCoding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ValueCoding.xcconfig; sourceTree = "<group>"; };
+		BAE650B7446471867E402991A7E12F95 /* NSDecimalNumberExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberExtensions.swift; path = Sources/NSDecimalNumberExtensions.swift; sourceTree = "<group>"; };
+		BC573CF7AD86A8D8E4048D81140F8EBE /* Money-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Money-umbrella.h"; sourceTree = "<group>"; };
+		C1ADF7560C3116E0E670B6C052522026 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C65DC4DED327122845F9EDA7385541F1 /* Bitcoin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bitcoin.swift; path = Sources/Bitcoin.swift; sourceTree = "<group>"; };
+		CAFE1249D91087F05C4FA1B60492941D /* Money.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Money.xcconfig; sourceTree = "<group>"; };
 		CD957405053F4EBAAF4382F612B7F680 /* Pods-ReceiptsClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReceiptsClient.release.xcconfig"; sourceTree = "<group>"; };
-		CE7A313356B93812C2C0809F9B909B8E /* Currency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = Sources/Currency.swift; sourceTree = "<group>"; };
+		CF598E7F5DB86EBF034152C99E7AF8E4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58C2504AC786FCF6FE575FF553C030F /* ValueCoding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ValueCoding-dummy.m"; sourceTree = "<group>"; };
+		D6F734C4B37E41D3170DB21A99EE3B0A /* Pods_ReceiptsClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ReceiptsClient.framework; path = "Pods-ReceiptsClient.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9007A7D01FBDD0B3E8E50C239882301 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		E79DE0C1905AFED8F9AA092A0737366F /* Pods-ReceiptsClient-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReceiptsClient-resources.sh"; sourceTree = "<group>"; };
-		E9DEBCEA9DAC81BDD381B6BFFC71CC86 /* ValueCoding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueCoding-umbrella.h"; sourceTree = "<group>"; };
-		EA0AE4DEE83BE88B10EF748518211384 /* ValueCoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueCoding.swift; path = Sources/ValueCoding.swift; sourceTree = "<group>"; };
+		EA8100BE35DB918775C23394976C010A /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		EBBBF4BF2FD7458F55DA0D81BADDBC10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4EA1761E0A4BC6F9AA703BA2F382F2B /* Pods-ReceiptsClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ReceiptsClient.modulemap"; sourceTree = "<group>"; };
-		F6F0B1C5A589A080A814959245A7A320 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F98661BF2067F485630E5F71E1D33EFC /* Money-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Money-umbrella.h"; sourceTree = "<group>"; };
-		FB5EFD1CF299B2F64A4D110F2702F12F /* Bitcoin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bitcoin.swift; path = Sources/Bitcoin.swift; sourceTree = "<group>"; };
+		F56D586F13E8062348395191AC580966 /* ValueCoding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueCoding-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33414858C0E26123D3BD70782FA18A7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B09AAECC3DE30FA83746107BDE5591E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7681B92392BB0FB40C1366A75DE8DCCF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,11 +131,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD00F24DE8D1CD915FCE6B38C273E83C /* Frameworks */ = {
+		89F759A1318B87C0F0915FF8F8608D23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E33D3542E94BA529E9A2913C20E1D28 /* Cocoa.framework in Frameworks */,
+				89C1C55A41A10CDB7EE7360962C4F3C6 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,13 +150,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DEBCEE497950DDA1E90C68346B1A9F2 /* Pods */ = {
+		07F57AC44B98FB85BA4528DCDCCA47EE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BEF0A01F6F1A19442ABEEAE9693CA19C /* Money */,
-				FDD7C6C6D2AF08CB55A0A1C67DC56E85 /* ValueCoding */,
+				53BF9F310A4EEFDA329E26585DD416F0 /* Info.plist */,
+				D9007A7D01FBDD0B3E8E50C239882301 /* SwiftyJSON.modulemap */,
+				EA8100BE35DB918775C23394976C010A /* SwiftyJSON.xcconfig */,
+				8CDECEB7EACECE5BE7922EC777D37E56 /* SwiftyJSON-dummy.m */,
+				412F6314B7D21C14D492F1D2B4CDA021 /* SwiftyJSON-prefix.pch */,
+				93732F877143573598DE261E855CAF2F /* SwiftyJSON-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		488571BA3F0389665BCAFFE18D8A0DA4 /* ValueCoding */ = {
+			isa = PBXGroup;
+			children = (
+				062D64C948D8122D950B85AFE3AE7F4C /* ValueCoding.swift */,
+				80F79A075708707C1BBC9DE58A8FA32D /* Support Files */,
+			);
+			name = ValueCoding;
+			path = ValueCoding;
 			sourceTree = "<group>";
 		};
 		4D02DF5430C0B4B72D19DEAE9DBC336B /* Targets Support Files */ = {
@@ -148,14 +190,24 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
-		7C7D0E20E7AFF49933BBC9680EC8CA1E /* Products */ = {
+		5F8D5740BB3B20C4ED44AED9E2B1AEA5 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				34FB0F06E21822FFA01E68FE762B3A58 /* Money.framework */,
-				31862517A97A55EAD85F942D336730B2 /* Pods_ReceiptsClient.framework */,
-				83D23098754A79F94B6621707B42F19A /* ValueCoding.framework */,
+				191FBF1778B34B24CDFEC43247FC1D7A /* SwiftyJSON.swift */,
+				07F57AC44B98FB85BA4528DCDCCA47EE /* Support Files */,
 			);
-			name = Products;
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		64694DE1DCCBB7E603285ADA89E78637 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAF81C8FC00730CEAF011D75683F8AB7 /* Money */,
+				5F8D5740BB3B20C4ED44AED9E2B1AEA5 /* SwiftyJSON */,
+				488571BA3F0389665BCAFFE18D8A0DA4 /* ValueCoding */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -163,24 +215,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				B75695FF67DFE49EB81D23AB68C4EC69 /* Frameworks */,
-				1DEBCEE497950DDA1E90C68346B1A9F2 /* Pods */,
-				7C7D0E20E7AFF49933BBC9680EC8CA1E /* Products */,
+				64694DE1DCCBB7E603285ADA89E78637 /* Pods */,
+				AE44CA13D945A0646C4659560AAC6488 /* Products */,
 				4D02DF5430C0B4B72D19DEAE9DBC336B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A380F4B70BE4CBECF09A39C47BA7BA32 /* Support Files */ = {
+		80F79A075708707C1BBC9DE58A8FA32D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				95203CEA7EDC7B3C248444E970B8F042 /* Info.plist */,
-				885D7CF530792A83F7E625ACC8929C27 /* Money.modulemap */,
-				1F5716BFFBF575BD02E590E8B8C29854 /* Money.xcconfig */,
-				6C74EDBA3FB6511D7036F1CF9FF0FCCF /* Money-dummy.m */,
-				3C0477B6AAFC1D8FE05F019ECC789F57 /* Money-prefix.pch */,
-				F98661BF2067F485630E5F71E1D33EFC /* Money-umbrella.h */,
+				21D42DD45B7764B87351BF18F4F2161E /* Info.plist */,
+				17C5294AFD4DEDF84492773C58F88481 /* ValueCoding.modulemap */,
+				A003439D0285AF063A8122D773AB661C /* ValueCoding.xcconfig */,
+				D58C2504AC786FCF6FE575FF553C030F /* ValueCoding-dummy.m */,
+				F56D586F13E8062348395191AC580966 /* ValueCoding-prefix.pch */,
+				65E6935B95858C0E32FB474039677DD9 /* ValueCoding-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Money";
+			path = "../Target Support Files/ValueCoding";
 			sourceTree = "<group>";
 		};
 		A71FD8C663418A0A55A78D6981E7CF56 /* Pods-ReceiptsClient */ = {
@@ -201,6 +253,17 @@
 			path = "Target Support Files/Pods-ReceiptsClient";
 			sourceTree = "<group>";
 		};
+		AE44CA13D945A0646C4659560AAC6488 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95150FAF4471E73A8D19D777F345F4A8 /* Money.framework */,
+				D6F734C4B37E41D3170DB21A99EE3B0A /* Pods_ReceiptsClient.framework */,
+				CF598E7F5DB86EBF034152C99E7AF8E4 /* SwiftyJSON.framework */,
+				1F9544AC103FD3D65D633191F4C69787 /* ValueCoding.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B75695FF67DFE49EB81D23AB68C4EC69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,64 +273,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BEF0A01F6F1A19442ABEEAE9693CA19C /* Money */ = {
+		CF9762BD6E87CE01D648FE2DC8D6309C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				311C379B60EBDE1DFA0C80824BC01D1C /* Autogenerated.swift */,
-				FB5EFD1CF299B2F64A4D110F2702F12F /* Bitcoin.swift */,
-				CE7A313356B93812C2C0809F9B909B8E /* Currency.swift */,
-				C4C97F0A765A972F11E2DE99955CE9B4 /* Decimal.swift */,
-				643EF288166E777EA074568A23E66011 /* DecimalNumberType.swift */,
-				5141A19BB07D7FA06F1BBBBE31F6C039 /* Locale.swift */,
-				958F81B0D55CBA4FC2EBEA9CC3CB7BB0 /* Money.swift */,
-				598C88A428616C7F3A6BCF07CFC65884 /* NSDecimalExtensions.swift */,
-				988F75630709EB01994F640707429C19 /* NSDecimalNumberExtensions.swift */,
-				A380F4B70BE4CBECF09A39C47BA7BA32 /* Support Files */,
+				C1ADF7560C3116E0E670B6C052522026 /* Info.plist */,
+				8084DA19EFD69748144E02FB2419FF29 /* Money.modulemap */,
+				CAFE1249D91087F05C4FA1B60492941D /* Money.xcconfig */,
+				5A04AF7CB243F5B5EB0A8A0A6F42FF15 /* Money-dummy.m */,
+				66950280F441D6FCEFDF7CC609C9F241 /* Money-prefix.pch */,
+				BC573CF7AD86A8D8E4048D81140F8EBE /* Money-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Money";
+			sourceTree = "<group>";
+		};
+		FAF81C8FC00730CEAF011D75683F8AB7 /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				8C88D48DA704434398AC216F02811D27 /* Autogenerated.swift */,
+				C65DC4DED327122845F9EDA7385541F1 /* Bitcoin.swift */,
+				2A94F593AF6B38166F1CF9E1336663CF /* Currency.swift */,
+				3EC74138FB0CF8966F54DBA33A4A2074 /* Decimal.swift */,
+				766DE1D210F724DEBEBD75BBC844B3AE /* DecimalNumberType.swift */,
+				05AFE3E043F8A42C4EFF7B291F2DE383 /* Locale.swift */,
+				653EB902342EBD11E3DC4A32DE242778 /* Money.swift */,
+				37144DC6D623A4C790C68287017464D9 /* NSDecimalExtensions.swift */,
+				BAE650B7446471867E402991A7E12F95 /* NSDecimalNumberExtensions.swift */,
+				CF9762BD6E87CE01D648FE2DC8D6309C /* Support Files */,
 			);
 			name = Money;
 			path = Money;
 			sourceTree = "<group>";
 		};
-		F4FF4A9F5FDFBFE769D47C81A40827E4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F6F0B1C5A589A080A814959245A7A320 /* Info.plist */,
-				627F6847176AD7A626143A1E7174C481 /* ValueCoding.modulemap */,
-				C26D17B2D498D4528C465FCF9CEB34C7 /* ValueCoding.xcconfig */,
-				9C84BFF5EB5661FCEC9C8F0FBF1BEE65 /* ValueCoding-dummy.m */,
-				A8675CC670D84E8EE98177B7F8B3CA45 /* ValueCoding-prefix.pch */,
-				E9DEBCEA9DAC81BDD381B6BFFC71CC86 /* ValueCoding-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ValueCoding";
-			sourceTree = "<group>";
-		};
-		FDD7C6C6D2AF08CB55A0A1C67DC56E85 /* ValueCoding */ = {
-			isa = PBXGroup;
-			children = (
-				EA0AE4DEE83BE88B10EF748518211384 /* ValueCoding.swift */,
-				F4FF4A9F5FDFBFE769D47C81A40827E4 /* Support Files */,
-			);
-			name = ValueCoding;
-			path = ValueCoding;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1D4A0DB4AB32A90947E74C3BB4E0D1D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DC4083EE09139AF9C1FF579243BC4E2 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4399D05FBEABE39DC624951773EE18ED /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				99E182168E94CAC1396797C0156B752A /* ValueCoding-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		866964086151BFEA99F1BAB053B57C26 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8151D5FB79F63C6D41FEE7FFA67F3CAB /* Pods-ReceiptsClient-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,26 +332,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8EFDCD883DF4A17C5189150D4A82B22 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CDD9D0B29492DCAB364D1A403044A33 /* Pods-ReceiptsClient-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4A499968F12EB627B185EFE412297BA4 /* Pods-ReceiptsClient */ = {
+		1E1289C9B84947425CD46DEC80619990 /* Pods-ReceiptsClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F1FB78A490CD91AA21D63EDEB0BF12F /* Build configuration list for PBXNativeTarget "Pods-ReceiptsClient" */;
+			buildConfigurationList = FBF6A24B03EDF77D831FAEFEA0FB7FD7 /* Build configuration list for PBXNativeTarget "Pods-ReceiptsClient" */;
 			buildPhases = (
-				F765BD4C688798853633CDC368F3A167 /* Sources */,
-				BD00F24DE8D1CD915FCE6B38C273E83C /* Frameworks */,
-				866964086151BFEA99F1BAB053B57C26 /* Headers */,
+				72451D30F01DE5A18453C11F8161810B /* Sources */,
+				89F759A1318B87C0F0915FF8F8608D23 /* Frameworks */,
+				B8EFDCD883DF4A17C5189150D4A82B22 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				37CAE31CC288829F9FC10358B110B74B /* PBXTargetDependency */,
-				6DF83FE62D4AB6F0C51CE0D09DDD031B /* PBXTargetDependency */,
+				38875996F688253B145CB5EDB8B44F61 /* PBXTargetDependency */,
+				F15CB93D92E5524B7BB3110804054A10 /* PBXTargetDependency */,
+				5AA174C2A645997C4349C53786A50908 /* PBXTargetDependency */,
 			);
 			name = "Pods-ReceiptsClient";
 			productName = "Pods-ReceiptsClient";
-			productReference = 31862517A97A55EAD85F942D336730B2 /* Pods_ReceiptsClient.framework */;
+			productReference = D6F734C4B37E41D3170DB21A99EE3B0A /* Pods_ReceiptsClient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C3229FCC6828F4221C6E350525E98103 /* Money */ = {
@@ -316,7 +378,24 @@
 			);
 			name = Money;
 			productName = Money;
-			productReference = 34FB0F06E21822FFA01E68FE762B3A58 /* Money.framework */;
+			productReference = 95150FAF4471E73A8D19D777F345F4A8 /* Money.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D87E512FC0ABA3FF378D38140548F23B /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98AD04494670454200BEEAEA05301371 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				DB059165300A58D70CEB282D6AC6C260 /* Sources */,
+				33414858C0E26123D3BD70782FA18A7F /* Frameworks */,
+				1D4A0DB4AB32A90947E74C3BB4E0D1D9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = CF598E7F5DB86EBF034152C99E7AF8E4 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E5860D517378348364EBC19D69199FE7 /* ValueCoding */ = {
@@ -333,7 +412,7 @@
 			);
 			name = ValueCoding;
 			productName = ValueCoding;
-			productReference = 83D23098754A79F94B6621707B42F19A /* ValueCoding.framework */;
+			productReference = 1F9544AC103FD3D65D633191F4C69787 /* ValueCoding.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -353,12 +432,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7C7D0E20E7AFF49933BBC9680EC8CA1E /* Products */;
+			productRefGroup = AE44CA13D945A0646C4659560AAC6488 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C3229FCC6828F4221C6E350525E98103 /* Money */,
-				4A499968F12EB627B185EFE412297BA4 /* Pods-ReceiptsClient */,
+				1E1289C9B84947425CD46DEC80619990 /* Pods-ReceiptsClient */,
+				D87E512FC0ABA3FF378D38140548F23B /* SwiftyJSON */,
 				E5860D517378348364EBC19D69199FE7 /* ValueCoding */,
 			);
 		};
@@ -371,6 +451,23 @@
 			files = (
 				E4B2E5B6737C664EDBFB6356B18FDF52 /* ValueCoding-dummy.m in Sources */,
 				17A6AFE8F8280BFE1154D27549C003E1 /* ValueCoding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72451D30F01DE5A18453C11F8161810B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3D5CD624EF9284E34601ED689EDFB96 /* Pods-ReceiptsClient-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB059165300A58D70CEB282D6AC6C260 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B73DD004C2700A5279DAAB8389FFBEE1 /* SwiftyJSON-dummy.m in Sources */,
+				21AD90E3711DC01BC400EFB9EBA18849 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,28 +488,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F765BD4C688798853633CDC368F3A167 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7E277B7D9835008315C2ACEB101C1B4B /* Pods-ReceiptsClient-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		37CAE31CC288829F9FC10358B110B74B /* PBXTargetDependency */ = {
+		38875996F688253B145CB5EDB8B44F61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Money;
 			target = C3229FCC6828F4221C6E350525E98103 /* Money */;
-			targetProxy = 7BD6FB6A0317A736ADE2D0BBD7A5FCD3 /* PBXContainerItemProxy */;
+			targetProxy = 1CF41E04D52B63584258932E5586C101 /* PBXContainerItemProxy */;
 		};
-		6DF83FE62D4AB6F0C51CE0D09DDD031B /* PBXTargetDependency */ = {
+		5AA174C2A645997C4349C53786A50908 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ValueCoding;
 			target = E5860D517378348364EBC19D69199FE7 /* ValueCoding */;
-			targetProxy = BF2F9DAEF52B62C4542305DB72DF5E52 /* PBXContainerItemProxy */;
+			targetProxy = 18BD5D26DBAB130AEE60A2892E4A1CDA /* PBXContainerItemProxy */;
 		};
 		7F511450862A63442225E5D062180330 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -420,12 +509,18 @@
 			target = E5860D517378348364EBC19D69199FE7 /* ValueCoding */;
 			targetProxy = 6C193786D9641A2362536F822BCD3838 /* PBXContainerItemProxy */;
 		};
+		F15CB93D92E5524B7BB3110804054A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = D87E512FC0ABA3FF378D38140548F23B /* SwiftyJSON */;
+			targetProxy = B8E6908368B4FCD0468D4CC3B92D61F7 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		073FF682D626E0D33C94D141F4878797 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F5716BFFBF575BD02E590E8B8C29854 /* Money.xcconfig */;
+			baseConfigurationReference = CAFE1249D91087F05C4FA1B60492941D /* Money.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -460,7 +555,7 @@
 		};
 		1DB3FA304C7294829658AEA8A81FFF38 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C26D17B2D498D4528C465FCF9CEB34C7 /* ValueCoding.xcconfig */;
+			baseConfigurationReference = A003439D0285AF063A8122D773AB661C /* ValueCoding.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -495,7 +590,7 @@
 		};
 		1F00A6A7C76C542271C586A7DF1E9725 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C26D17B2D498D4528C465FCF9CEB34C7 /* ValueCoding.xcconfig */;
+			baseConfigurationReference = A003439D0285AF063A8122D773AB661C /* ValueCoding.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -519,6 +614,46 @@
 				MODULEMAP_FILE = "Target Support Files/ValueCoding/ValueCoding.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ValueCoding;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2B6091E18E00EC59B8903F56D3BC91DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 956F46B5553FFC66E13F5B175A7AD89B /* Pods-ReceiptsClient.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ReceiptsClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-ReceiptsClient/Pods-ReceiptsClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ReceiptsClient;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -577,9 +712,80 @@
 			};
 			name = Debug;
 		};
+		3AF82919C285CEA94E6C2ED86099BC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA8100BE35DB918775C23394976C010A /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		57E5471E9CB48154B9C801AC7114CD91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA8100BE35DB918775C23394976C010A /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		5811EF3D2CE069A74FC9D1CC3E006F41 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F5716BFFBF575BD02E590E8B8C29854 /* Money.xcconfig */;
+			baseConfigurationReference = CAFE1249D91087F05C4FA1B60492941D /* Money.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -613,47 +819,7 @@
 			};
 			name = Debug;
 		};
-		6B28FFB6D504778BE695A15DAD34D969 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 956F46B5553FFC66E13F5B175A7AD89B /* Pods-ReceiptsClient.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ReceiptsClient/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/Pods-ReceiptsClient/Pods-ReceiptsClient.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ReceiptsClient;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D514647D6464C57E041B860D5B434C22 /* Release */ = {
+		82E32F8545289B6A87E402DE5249E872 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD957405053F4EBAAF4382F612B7F680 /* Pods-ReceiptsClient.release.xcconfig */;
 			buildSettings = {
@@ -739,15 +905,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F1FB78A490CD91AA21D63EDEB0BF12F /* Build configuration list for PBXNativeTarget "Pods-ReceiptsClient" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B28FFB6D504778BE695A15DAD34D969 /* Debug */,
-				D514647D6464C57E041B860D5B434C22 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -757,11 +914,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		98AD04494670454200BEEAEA05301371 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57E5471E9CB48154B9C801AC7114CD91 /* Debug */,
+				3AF82919C285CEA94E6C2ED86099BC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DEF6ACEDB1C4A7240F437E28C84D9B4F /* Build configuration list for PBXNativeTarget "Money" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5811EF3D2CE069A74FC9D1CC3E006F41 /* Debug */,
 				073FF682D626E0D33C94D141F4878797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBF6A24B03EDF77D831FAEFEA0FB7FD7 /* Build configuration list for PBXNativeTarget "Pods-ReceiptsClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B6091E18E00EC59B8903F56D3BC91DF /* Debug */,
+				82E32F8545289B6A87E402DE5249E872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
